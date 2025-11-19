@@ -1,0 +1,12 @@
+<form>
+  <mat-grid-list cols="2" rowHeight="6:1">
+    <ng-container *ngFor="let field of fields">
+      <mat-grid-tile>
+        <ng-container
+        [ngComponentOutlet]="getComponentFor(field)"
+        [ngComponentOutletInputs]="{ field: field, value: field.value, placeHolder: field.label }">
+        </ng-container>
+      </mat-grid-tile>
+    </ng-container>
+  </mat-grid-list>
+</form>
